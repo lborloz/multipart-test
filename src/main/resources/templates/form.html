@@ -1,7 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
-<div style="color: red;" th:text="${fileName}"></div>
+<div style="color: red;" th:if="${fileName != null}" th:text="'You uploaded: ' +  ${fileName}"></div>
+
+<br></br>
 
 <form action="uploadSuccess.html" th:action="@{/upload}" method="post"
 	enctype="multipart/form-data">
